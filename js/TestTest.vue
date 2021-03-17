@@ -8,7 +8,7 @@
 // Import component
 import IconifyIcon from '@iconify/vue';
 import homeIcon from '@iconify-icons/mdi-light/home';
-
+// const homeIcon = require('@iconify-icons/mdi-light/home')
 export default {
     name: "TestTest",
     props: {},
@@ -26,4 +26,3 @@ export default {
    },
 }
 </script>
-
