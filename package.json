@@ -17,8 +17,10 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
     "install": "^0.13.0",
+    "jest": "^26.6.3",
     "npm": "^7.6.3",
-    "vue-jest": "^3.0.7"
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -29,12 +31,18 @@
     "transform": {
       ".*\\.(vue)$": "vue-jest",
       ".*\\.(js)$": "babel-jest"
-    }
+    },
+    "transformIgnorePatterns": ["/(?!(node_modules/@iconify-icons))/"]
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
-    ]
+    ],
+    "env": {
+      "test": {
+        "presets": ["@babel/preset-env"]
+      }
+    }
   },
   "dependencies": {
     "vue": "^2.6.12"
